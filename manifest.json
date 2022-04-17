@@ -1,0 +1,31 @@
+{
+ "manifest_version": 2,
+ "name": "simple day",
+ "version": "1.0.0",
+ "description": "A Google Extension to help UC Davis students stay organized.",
+ "content_scripts": [
+   {
+     "matches": ["<all_urls>"],
+     "css": ["style.css"],
+     "js": ["script.js"]
+   }
+ ],
+ "browser_action": {
+   "default_title": "simple day",
+   "default_popup": "index.html",
+   "default_icon": {
+     "16": "photos/favicon.svg",
+     "32": "photos/favicon.svg"
+   }
+ },
+  "permissions": [
+    "activeTab"
+   ],
+  "background": {
+    "page": "index.html",
+    "persistent": true
+  },
+    "chrome_url_overrides" : {
+    "newtab": "index.html"
+  }
+}
